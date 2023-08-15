@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Söhne";
+    src: url("/fonts/soehne-leicht.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Söhne";
+    src: url("/fonts/soehne-leicht-italic.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Söhne";
+    src: url("/fonts/soehne-buch.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Söhne";
+    src: url("/fonts/soehne-buch-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Söhne";
+    src: url("/fonts/soehne-dreiviertelfett.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Söhne";
+    src: url("/fonts/soehne-dreiviertelfett-italic.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+  }
+}
