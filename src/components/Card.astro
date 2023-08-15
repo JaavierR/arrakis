@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets'
+
 interface Props {
   user: {
     name: string;
     username: string;
     role: string;
     country: string;
-    image: string;
+    image: any;
   };
 }
 
@@ -15,14 +17,14 @@ const { user } = Astro.props as Props;
 <div
   class="relative group overflow-hidden w-full rounded-2xl shadow border border-[#ccc] bg-white/40 pt-2 px-2 before:content-[''] before:block before:absolute before:h-full before:w-full before:inset-0 before:rounded-[inherit] before:[background:_radial-gradient(800px_circle_at_var(--x)_var(--y),hsla(0,_0%,_100%,_0.2),_transparent_40%)] before:z-[1] cursor-pointer [transform:translateZ(0)]"
 >
-  <img
+  <Image
     src={user.image}
-    alt=""
+    alt={user.name}
     class="rounded-xl object-cover aspect-[3/4] h-full max-h-[363px] w-full transition duration-[400ms] ease-in-out text-transparent grayscale group-hover:grayscale-0"
   />
-  <img
+  <Image
     src={user.image}
-    alt=""
+    alt={user.name}
     class="absolute aspect-[3/4] h-full max-h-[363px] [transform:scale(1.1)_translateZ(0)] top-0 -z-[1] left-0 will-change-[filter] pointer-events-none w-full transition duration-[400ms] ease-in-out text-transparent saturate-200 grayscale blur-xl group-hover:grayscale-0"
   />
 
