@@ -1,30 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const me = {
+  name: "Javier Reyes",
+  username: "jvre",
+  country: "Chile",
+  role: "Software Engineer",
+  image: "/images/me.jpg",
+};
 ---
 
 <Layout title="Javier Reyes — Website">
   <main class="px-6 py-10 md:p-20">
-    <div class="pb-16 md:pb-10 h-min relative flex gap-8">
-      <div
-        class="w-[clamp(45ch,75%,55ch)] tracking-[normal] text-sm/6 mt-6 text-zinc-800 flex flex-col gap-8 [font-feature-settings:'ss02'] font-normal prose"
-      >
-        <div>
-          <p>
-            I&lsquo;m Javier, a Software Engineer based in Santiago, Chile.
-            Actually I&lsquo;m working at Segic as SWE but also I&lsquo;m a
-            teacher at my <i>Alma Mater</i> about Databases and IA primarly. In my
-            free time I like to take different kind of projects to explore new technologies,
-            learn new things &amp; polish my skills.
-          </p>
+    <div
+      class="pb-16 md:pb-10 h-min relative flex gap-8 flex-col-reverse sm:flex-row"
+    >
+      <div id="personal-card" class="min-w-[18.125rem] max-w-[18.125rem]">
+        <Card user={me} />
+      </div>
 
-          <p>
-            Some interesting facts about me: I like shuffling cards (magician),
-            the photography, science, music and of course the technology.
-            Currently I&lsquo;m available for freelance work, if you have a
-            project in mind, please feel free to contact me.
-          </p>
-        </div>
+      <div
+        class="w-[clamp(45ch,75%,55ch)] tracking-[normal] text-sm/6 sm:mt-6 text-zinc-800 flex flex-col gap-8 [font-feature-settings:'ss02'] font-normal prose"
+      >
+        <p>
+          I&lsquo;m Javier, a Software Engineer based in Santiago, Chile.
+          Actually I&lsquo;m working at Segic as SWE but also I&lsquo;m a
+          teacher at my <i>Alma Mater</i> about Databases and IA primarly. In my
+          free time I like to take different kind of projects to explore new technologies,
+          learn new things &amp; polish my skills.
+        </p>
+
+        <p>
+          Some interesting facts about me: I like shuffling cards (magician),
+          the photography, science, music and of course the technology.
+          Currently I&lsquo;m available for freelance work, if you have a
+          project in mind, please feel free to contact me.
+        </p>
       </div>
     </div>
   </main>
 </Layout>
+
+<script>
+  (document.getElementById("personal-card") as HTMLElement).onmousemove = (
+    e
+  ) => {
+    const rect = (
+        document.getElementById("personal-card") as HTMLElement
+      ).getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+
+    (document.getElementById("personal-card") as HTMLElement).style.setProperty(
+      "--x",
+      x + "px"
+    );
+    (document.getElementById("personal-card") as HTMLElement).style.setProperty(
+      "--y",
+      y + "px"
+    );
+  };
+</script>
