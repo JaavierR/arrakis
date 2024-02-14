@@ -1,3 +1,6 @@
+# intellij
+.idea/
+
 # build output
 dist/
 # generated types
