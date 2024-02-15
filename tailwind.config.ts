@@ -8,6 +8,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Söhne", ...defaultTheme.fontFamily.sans],
+        "ia-writer-quattro": [
+          "iA Writer Quattro",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
     },
   },

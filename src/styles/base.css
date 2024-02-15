@@ -4,6 +4,14 @@
 
 @layer base {
   @font-face {
+    font-family: "iA Writer Quattro";
+    src: url("/fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: "Söhne";
     src: url("/fonts/soehne-leicht.woff2") format("woff2");
     font-weight: 300;
