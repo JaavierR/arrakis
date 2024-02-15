@@ -17,14 +17,17 @@ const me = {
     <div
       class="pb-16 md:pb-10 h-min relative flex gap-8 flex-col-reverse sm:flex-row"
     >
-      <div id="personal-card" class="min-w-[18.125rem] max-w-[18.125rem]">
+      <div
+        id="personal-card"
+        class="min-w-[18.125rem] max-w-[18.125rem] font-ia-writer-quattro"
+      >
         <Card user={me} />
       </div>
 
       <div
         class="w-[clamp(45ch,75%,55ch)] tracking-[normal] text-sm/6 sm:mt-6 text-zinc-800 flex flex-col [font-feature-settings:'ss02'] font-normal prose"
       >
-        <p>
+        <p class="first-letter:text-xl">
           I&lsquo;m Javier, a Software Engineer based in Santiago, Chile.
           Actually I&lsquo;m working at Segic as SWE but also I&lsquo;m a
           teacher at my <i>Alma Mater</i> about Databases and IA primarly. In my
