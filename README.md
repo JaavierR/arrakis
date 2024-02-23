@@ -1,4 +1,3 @@
-Prueba
 # Astro Starter Kit: Minimal
 
 ```
